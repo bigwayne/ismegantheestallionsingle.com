@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is Megan Thee Stallion Single?</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial Black', sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+    .bg-video {
+      position: fixed;
+      top: 50%; left: 50%;
+      min-width: 100%; min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+    .single-bg {
+      background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 25%, #ffb347 50%, #ff6b6b 75%, #ee4466 100%);
+    }
+    .taken-bg {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533a71 75%, #4a2c5a 100%);
+    }
+    .answer {
+      font-size: clamp(4rem, 20vw, 12rem);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: center;
+      padding: 1rem;
+      text-shadow: 4px 4px 0 #000, -2px -2px 0 #000;
+    }
+    .yes { color: #fff; }
+    .no { color: #fff; }
+  </style>
+</head>
+<body>
+  <script>
+    const realhotgirlshit = true;
+    
+    const singleVideo = ""; // coming soon
+    const takenVideo = ""; // coming soon
+    
+    const isSingle = realhotgirlshit;
+    const videoSrc = isSingle ? singleVideo : takenVideo;
+    
+    document.body.classList.add(isSingle ? 'single-bg' : 'taken-bg');
+    
+    if (videoSrc) {
+      document.body.innerHTML += `
+        <video class="bg-video" autoplay muted loop playsinline>
+          <source src="${videoSrc}" type="video/mp4">
+        </video>
+      `;
+    }
+    
+    document.body.innerHTML += `
+      <div class="answer ${isSingle ? 'yes' : 'no'}">
+        ${isSingle ? 'YES' : 'NO'}
+      </div>
+    `;
+  </script>
+</body>
+</html>
