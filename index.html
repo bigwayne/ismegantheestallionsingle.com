@@ -49,10 +49,9 @@
     const singleVideo = ""; // coming soon
     const takenVideo = ""; // coming soon
     
-    const isSingle = realhotgirlshit;
-    const videoSrc = isSingle ? singleVideo : takenVideo;
+    const videoSrc = realhotgirlshit ? singleVideo : takenVideo;
     
-    document.body.classList.add(isSingle ? 'single-bg' : 'taken-bg');
+    document.body.classList.add(realhotgirlshit ? 'single-bg' : 'taken-bg');
     
     if (videoSrc) {
       document.body.innerHTML += `
@@ -63,8 +62,8 @@
     }
     
     document.body.innerHTML += `
-      <div class="answer ${isSingle ? 'yes' : 'no'}">
-        ${isSingle ? 'YES' : 'NO'}
+      <div class="answer ${realhotgirlshit ? 'yes' : 'no'}">
+        ${realhotgirlshit ? 'YES' : 'NO'}
       </div>
     `;
   </script>
